@@ -45,7 +45,7 @@
         </div>
         <!-- 左侧导航菜单 -->
         <el-menu
-          default-active="/home"
+          :default-active="$route.path"
           class="el-menu-vertical-demo"
           background-color="#23262E"
           text-color="#fff"
