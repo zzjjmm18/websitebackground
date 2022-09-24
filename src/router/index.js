@@ -6,10 +6,6 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    redirect: '/layout'
-  },
-  {
     path: '/login',
     component: () => import('@/views/login')
   },
@@ -18,8 +14,15 @@ const routes = [
     component: () => import('@/views/register')
   },
   {
-    path: '/layout',
-    component: () => import('@/views/layout')
+    path: '/',
+    component: () => import('@/views/layout'),
+    redirect: '/home', // 默认显示首页的二级路由
+    children: [
+      {
+        path: 'home',
+        component: () => import('@/views/home')
+      }
+    ]
   }
 ]
 
@@ -27,7 +30,7 @@ const router = new VueRouter({
   routes
 })
 // 无需验证token的页面
-const whiteList = ['/login', '/reg']
+const whiteList = ['/login', '/register']
 
 router.beforeEach((to, from, next) => {
   const token = store.state.token

@@ -83,7 +83,10 @@
       </el-aside>
       <el-container>
         <!-- 页面主体区域 -->
-        <el-main> Main.vue后台主页 </el-main>
+        <el-main>
+          <!-- 二级路由 -->
+          <router-view></router-view>
+        </el-main>
         <!-- 底部 footer 区域 -->
         <el-footer>© xxxx-xxxx</el-footer>
       </el-container>

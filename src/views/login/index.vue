@@ -71,7 +71,7 @@ export default {
         // 4. 将token保存到vuex中
         this.updateToken(res.token)
         // 5.跳转到主页
-        this.$router.push('/layout')
+        this.$router.push('/')
       })
     }
   }
