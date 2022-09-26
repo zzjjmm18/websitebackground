@@ -25,6 +25,10 @@ const routes = [
       {
         path: 'user-info', // 这里必须叫user-info, 因为侧边栏导航切换的是它
         component: () => import('@/views/user/userInfo')
+      },
+      {
+        path: 'user-pwd', // 必须用这个值
+        component: () => import('@/views/user/userPwd')
       }
     ]
   }
