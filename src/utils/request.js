@@ -1,8 +1,10 @@
 import axios from 'axios'
 import store from '@/store' // 引入store对象
 
+export const baseURL = 'http://big-event-vue-api-t.itheima.net'
+
 const service = axios.create({
-  baseURL: 'http://big-event-vue-api-t.itheima.net'
+  baseURL
 })
 
 // 白名单: 不需要携带token的api地址
