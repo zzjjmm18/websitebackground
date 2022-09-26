@@ -16,7 +16,8 @@
         <el-submenu index="1">
           <template slot="title">
             <!-- 头像 -->
-            <img src="~@/assets/images/sample.jpg" alt="" class="avatar" />
+            <img :src="user_pic" alt="" v-if="user_pic" class="avatar" />
+            <img src="~@/assets/images/sample.jpg" alt="" v-else class="avatar" />
             <span>个人中心</span>
           </template>
           <el-menu-item index="1-1"

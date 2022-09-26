@@ -29,6 +29,10 @@ const routes = [
       {
         path: 'user-pwd', // 必须用这个值
         component: () => import('@/views/user/userPwd')
+      },
+      {
+        path: 'user-avatar', // 必须用这个值
+        component: () => import('@/views/user/userAvatar')
       }
     ]
   }
